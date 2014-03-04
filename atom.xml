@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>清炒白菜</title>
+ <link href="http://yushiro.github.io/atom.xml" rel="self"/>
+ <link href="http://yushiro.github.io"/>
+ <updated>2014-03-04T16:52:49+08:00</updated>
+ <id>http://yushiro.github.io</id>
+ <author>
+   <name>Yushiro</name>
+   <email>yushiro@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>jekyll的安装和配置</title>
+   <link href="http://yushiro.github.io/jekyll/2014/02/26/jekyll%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE"/>
+   <updated>2014-02-26T15:43:46+08:00</updated>
+   <id>http://yushiro.github.io/jekyll/2014/02/26/jekyll安装、配置</id>
+   <content type="html">&lt;h2&gt;安装&lt;/h2&gt;
+
+&lt;p&gt;按照&lt;a href=&quot;http://jekyllcn.com/&quot;&gt;jekyll中文&lt;/a&gt;的教程进行安装&lt;/p&gt;
+
+&lt;h3&gt;Jekyll Bootstrap&lt;/h3&gt;
+
+&lt;p&gt;官网：&lt;a href=&quot;http://jekyllbootstrap.com&quot;&gt;http://jekyllbootstrap.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;GitHub：&lt;a href=&quot;https://github.com/plusjade/jekyll-bootstrap/&quot;&gt;https://github.com/plusjade/jekyll-bootstrap/&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://github.com/plusjade/jekyll-bootstrap.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;把整个文件夹中的内容Copy到jekyll新建的blog目录（比如yushiro.github.io）&lt;/li&gt;
+&lt;li&gt;修改_config.yml
+title: 博客网站名字
+配置disqus帐号名
+配置Google Analytics帐号&lt;/li&gt;
+&lt;li&gt;修改_include\themes\twitter\post.html
+&lt;script src=&quot;https://gist.github.com/9342060.js&quot;&gt; &lt;/script&gt;
+替换为
+&lt;script src=&quot;https://gist.github.com/9342075.js&quot;&gt; &lt;/script&gt;&lt;/li&gt;
+&lt;li&gt;修改_includes\themes\twitter\default.html
+增加如下代码，语法高亮的&lt;a href=&quot;https://github.com/mojombo/tpw/blob/master/css/syntax.css&quot;&gt;syntax.css&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;&amp;lt;link href=&amp;quot;/css/syntax.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;修改jekyll默认的markdown解析器为&lt;a href=&quot;https://github.com/vmg/redcarpet&quot;&gt;redcarpet&lt;/a&gt;（可以识别```为代码段）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;markdown:    redcarpet
+redcarpet:
+  extensions: [fenced_code_blocks]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;如果不想使用”评论“功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash language-bash&quot; data-lang=&quot;bash&quot;&gt;  comments :
+    provider : &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#disqus&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;参考：
+&lt;a href=&quot;http://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html&quot;&gt;Improve Code Highlighting in a Jekyll-based Blog Site&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Webstorm</title>
+   <link href="http://yushiro.github.io/webstrom/2014/02/26/WebStorm"/>
+   <updated>2014-02-26T14:58:44+08:00</updated>
+   <id>http://yushiro.github.io/webstrom/2014/02/26/WebStorm</id>
+   <content type="html">&lt;h3&gt;Node.js下各种Package的自动感知&lt;/h3&gt;
+
+&lt;p&gt;需要安装 TypeScript stubs &lt;a href=&quot;https://github.com/borisyankov/DefinitelyTyped/blob/master/express/express.d.ts&quot;&gt;https://github.com/borisyankov/DefinitelyTyped/blob/master/express/express.d.ts&lt;/a&gt;
+也可以直接从菜单中Download
+Settings-&amp;gt;JavaScript-&amp;gt;Libraries-&amp;gt;Download|TypeScript community stubs&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://dl.dropboxusercontent.com/s/e5iugv4k7ds5ci3/webstormsetting.PNG&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>各种tips</title>
+   <link href="http://yushiro.github.io/veeva/2014/02/25/%E5%90%84%E7%A7%8Dtips"/>
+   <updated>2014-02-25T17:43:11Z</updated>
+   <id>http://yushiro.github.io/veeva/2014/02/25/各种tips</id>
+   <content type="html">&lt;h2&gt;Javascript&lt;/h2&gt;
+
+&lt;h3&gt;JS中String类型的判断&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;asdf&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;strObj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;asf&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//返回的是false;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;string&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//返回true;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;strObj&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//返回true;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;参考：&lt;a href=&quot;&quot;&gt;http://stackoverflow.com/questions/203739/why-does-instanceof-return-false-for-some-literals&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;Node.js&lt;/h2&gt;
+
+&lt;h3&gt;NodeJS一些比较坑的地方&lt;/h3&gt;
+
+&lt;h4&gt;安装&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在win下安装完Nodejs后， 最好安装一下VS2010 C++，至少jsdom这个组件如果不安装VS2010 C++就会无法正常安装。&lt;/li&gt;
+&lt;li&gt;在WIN下， 最好设置一下NODE_PATH环境， 指向node modules的安装目录，否则在运行js的时候，会提示模块找不到
+&lt;code&gt;
+NODE_PATH=C:\Users\yushiro\node_modules
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Veeva相关</title>
+   <link href="http://yushiro.github.io/veeva/2014/02/25/Veeva%E7%9B%B8%E5%85%B3"/>
+   <updated>2014-02-25T17:43:11Z</updated>
+   <id>http://yushiro.github.io/veeva/2014/02/25/Veeva相关</id>
+   <content type="html">&lt;h3&gt;iRep App数据直接更新方法&lt;/h3&gt;
+
+&lt;p&gt;在越狱的iPad上，直接更新iRep的Presentation的Slide&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;bash language-bash&quot; data-lang=&quot;bash&quot;&gt;pscp -r * root@192.168.1.230:/User/Applications/D7B732B4-BC37-4523-B437-343417B18C0B/Documents/jizhou.zhang40sudler.com/Media/a0DK000000HW2W1MAL/CV_ELIQUIS_DEMO2_Slide2 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;其中a0DK000000HW2W1MAL是该Slide在salesforce网站上的部分URL参数&lt;/p&gt;
+
+&lt;h3&gt;批量比较差异文件&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;for /r in (showimg*.html) do @fc ..\pdf\html\%~nxi %i
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;搜索当前目录（包含子目录）中的showimg*.html文件， 并于..\pdf\html下的同名文件进行差异比较&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Welcome to Jekyll!</title>
+   <link href="http://yushiro.github.io/jekyll/update/2014/02/25/welcome-to-jekyll"/>
+   <updated>2014-02-25T13:43:11Z</updated>
+   <id>http://yushiro.github.io/jekyll/update/2014/02/25/welcome-to-jekyll</id>
+   <content type="html">&lt;p&gt;You&amp;#39;ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
+To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&amp;#39;s GitHub repo&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

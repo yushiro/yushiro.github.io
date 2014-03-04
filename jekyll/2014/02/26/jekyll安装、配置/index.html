@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>jekyll的安装和配置</title>
+    
+    <meta name="author" content="Yushiro">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/syntax.css" rel="stylesheet">
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">清炒白菜</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>jekyll的安装和配置 </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <h2>安装</h2>
+
+<p>按照<a href="http://jekyllcn.com/">jekyll中文</a>的教程进行安装</p>
+
+<h3>Jekyll Bootstrap</h3>
+
+<p>官网：<a href="http://jekyllbootstrap.com">http://jekyllbootstrap.com</a></p>
+
+<p>GitHub：<a href="https://github.com/plusjade/jekyll-bootstrap/">https://github.com/plusjade/jekyll-bootstrap/</a></p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">git clone https://github.com/plusjade/jekyll-bootstrap.git
+</code></pre></div>
+<ul>
+<li>把整个文件夹中的内容Copy到jekyll新建的blog目录（比如yushiro.github.io）</li>
+<li>修改_config.yml
+title: 博客网站名字
+配置disqus帐号名
+配置Google Analytics帐号</li>
+<li>修改_include\themes\twitter\post.html
+<script src="https://gist.github.com/9342060.js"> </script>
+替换为
+<script src="https://gist.github.com/9342075.js"> </script></li>
+<li>修改_includes\themes\twitter\default.html
+增加如下代码，语法高亮的<a href="https://github.com/mojombo/tpw/blob/master/css/syntax.css">syntax.css</a></li>
+</ul>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;link href=&quot;/css/syntax.css&quot; rel=&quot;stylesheet&quot;&gt;
+</code></pre></div>
+<ul>
+<li>修改jekyll默认的markdown解析器为<a href="https://github.com/vmg/redcarpet">redcarpet</a>（可以识别```为代码段）</li>
+</ul>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">markdown:    redcarpet
+redcarpet:
+  extensions: [fenced_code_blocks]
+</code></pre></div>
+<ul>
+<li>如果不想使用”评论“功能</li>
+</ul>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">  comments :
+    provider : <span class="nb">false</span> <span class="c">#disqus</span>
+</code></pre></div>
+<p>参考：
+<a href="http://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html">Improve Code Highlighting in a Jekyll-based Blog Site</a></p>
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/webstrom/2014/02/26/WebStorm" title="Webstorm">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'yushiro'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>26 February 2014</span></div>
+
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Yushiro 2012 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+

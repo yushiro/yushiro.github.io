@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9 ie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>jekyll的安装和配置</title>
+	<meta name="author" content="Yushiro">
+	<link href='/assets/themes/the-program/css/style.css' rel="stylesheet" media="all">
+	<link href="http://feeds.feedburner.com/" rel="alternate" title="jekyll的安装和配置" type="application/atom+xml">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+</head>
+<body>
+
+<div id="page" class="hentry">
+	<header class="the-header">
+		<div class="unit-head">
+			<div class="unit-inner unit-head-inner">
+				<nav class="nav-global">
+					<ul>
+						<li class="logo"><a href="/">清炒白菜</a></li>
+						<li class="archive"><a href="/archive.html">archive</a></li>
+						<li class="page"><a href="/pages.html">pages</a></li>
+						<li class="category"><a href="/categories.html">categories</a></li>
+						<li class="tag"><a href="/tags.html">tags</a></li>
+						<li class="forkme"><div></div></li>
+					</ul>
+				</nav>
+			</div><!-- unit-inner -->
+		</div><!-- unit-head -->
+	</header>
+	<div class="body" role="main">
+		<div class="unit-body">
+			<div class="unit-inner unit-body-inner">
+				<div class="entry-content">
+					
+<article class="unit-article layout-post">
+	<div class="unit-inner unit-article-inner">
+		<div class="content">
+			<header>
+				<div class="unit-head">
+					<div class="unit-inner unit-head-inner">
+						<h1 class="h2 entry-title">jekyll的安装和配置</h1>
+					</div><!-- unit-inner -->
+				</div><!-- unit-head -->
+			</header>
+
+			<div class="bd">
+				<div class="entry-content">
+					<h2>安装</h2>
+
+<p>按照<a href="http://jekyllcn.com/">jekyll中文</a>的教程进行安装</p>
+
+<h3>Jekyll Bootstrap</h3>
+
+<p>官网：<a href="http://jekyllbootstrap.com">http://jekyllbootstrap.com</a></p>
+
+<p>GitHub：<a href="https://github.com/plusjade/jekyll-bootstrap/">https://github.com/plusjade/jekyll-bootstrap/</a></p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">git clone https://github.com/plusjade/jekyll-bootstrap.git
+</code></pre></div>
+<ul>
+<li>把整个文件夹中的内容Copy到jekyll新建的blog目录（比如yushiro.github.io）</li>
+<li>修改_config.yml
+title: 博客网站名字
+配置disqus帐号名
+配置Google Analytics帐号</li>
+<li>修改_include\themes\twitter\post.html
+<script src="https://gist.github.com/9342060.js"> </script>
+替换为
+<script src="https://gist.github.com/9342075.js"> </script></li>
+<li>修改_includes\themes\twitter\default.html
+增加如下代码，语法高亮的<a href="https://github.com/mojombo/tpw/blob/master/css/syntax.css">syntax.css</a></li>
+</ul>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;link href=&quot;/css/syntax.css&quot; rel=&quot;stylesheet&quot;&gt;
+</code></pre></div>
+<ul>
+<li>修改jekyll默认的markdown解析器为<a href="https://github.com/vmg/redcarpet">redcarpet</a>（可以识别```为代码段）</li>
+</ul>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">markdown:    redcarpet
+redcarpet:
+  extensions: [fenced_code_blocks]
+</code></pre></div>
+<ul>
+<li>如果不想使用”评论“功能<br></li>
+</ul>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">  comments :
+    provider : <span class="nb">false</span> <span class="c">#disqus</span>
+</code></pre></div>
+<ul>
+<li>安装、切换theme样式<br></li>
+</ul>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">rake theme:install <span class="nv">git</span><span class="o">=</span><span class="s2">&quot;https://github.com/jekyllbootstrap/theme-the-program.git&quot;</span>
+rake theme:switch <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;the-program&quot;</span>
+</code></pre></div>
+<ul>
+<li>rake的安装<br></li>
+</ul>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">sudo gem install rake --no-rdoc --no-ri
+</code></pre></div>
+<p>参考：<br>
+1. <a href="http://jekyllbootstrap.com/usage/jekyll-quick-start.html">Jekyll QuickStart</a><br>
+2. <a href="http://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html">Improve Code Highlighting in a Jekyll-based Blog Site</a><br>
+3. <a href="http://ellochen.github.io/2013/03/%E5%86%99%E4%BD%9C%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA(git+github+markdown+jekyll)/">写作环境搭建(git+github+markdown+jekyll)</a><br>
+4. <a href="http://jekyllcn.com/">jekyll介绍中文翻译站</a></p>
+
+					<div class="meta">
+						<p class="date-publish">
+							Published: 
+							<date class="date-pub" title="2014-02-26T15:43:46+08:00" datetime="2014-02-26T15:43:46+08:00" pubdate>
+							<span class="month"><abbr>February</abbr></span>
+							<span class="day">26</span>
+							<span class="year">2014</span>
+							</date>
+						</p>
+						<ul class="list-category list-linear">
+							<li class="list-head">category: </li>
+							
+							
+
+
+  
+     
+    	<li><a href="/categories.html#jekyll-ref">
+    		jekyll <span>2</span>
+    	</a></li>
+    
+  
+
+
+						</ul>
+						<ul class="list-tag list-linear">
+							<li class="list-head">tags: </li>
+							
+							
+
+
+  
+    
+  
+
+
+
+						</ul>
+					</div><!-- meta -->
+				</div><!-- entry-content -->
+				<div class="misc-content">
+					<div class="social">
+						<ul class="list-linear">
+							<li><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="yushiro" data-lang="en">Tweet</a></div></li>
+							<li><div class="twitter-follow"><a href="https://twitter.com/yushiro" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
+						</ul>
+					</div>
+					<div class="comment">
+					
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_shortname = 'yushiro'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+					</div>
+				</div><!-- misc-content -->
+			</div><!-- bd -->
+			<footer class="unit-foot">
+				<div class="unit-inner unit-foot-inner">
+					<nav class="pagination">
+						<ul>
+							
+							<li class="prev"><a class="internal" rel="prev"  href="/webstrom/2014/02/26/WebStorm" title="View Webstorm">&laquo; Webstorm</a></li>
+							
+							
+							
+						</ul>
+					</nav>
+					<p class="gotop">
+						<a href="#page">Back to Top</a>
+					</p>
+				</div>
+			</footer>
+
+		</div><!-- content -->
+	</div><!-- unit-inner -->
+</article>
+
+
+				</div>
+			</div><!-- unit-inner -->
+		</div><!-- unit-body -->
+	</div><!-- body -->
+	<footer class="the-footer">
+		<div class="unit-foot">
+			<div class="unit-inner unit-foot-inner">
+				<div class="misc vcard">
+					<h4>about</h4>
+					<ul>
+						<li class="contact"><address><span class="author fn n">Yushiro</span> - <span class="fn email">yushiro@gmail.com</span></address></li>
+						<li class="github"><a href="http://github.com/yushiro/" rel="me">github.com/yushiro</a></li>
+						<li class="twitter"><a href="http://twitter.com/yushiro/" rel="me">twitter.com/yushiro</a></li>
+						<li class="rss"><a href="http://feeds.feedburner.com/">Subscribe to RSS Feed</a></li>
+					</ul>
+				</div><!-- misc -->
+				<p class="licence">
+					Theme: <a href="https://github.com/jekyllbootstrap/theme-the-program.git">the program</a> based on <a href="http://jekyllbootstrap.com/">Jekyll-bootstrap</a>.<br>
+					Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a>.
+				</p>
+			</div><!-- unit-foot-inner -->
+		</div><!-- unit-foot -->
+	</footer>
+</div><!-- page -->
+
+<script>
+/*! A fix for the iOS orientationchange zoom bug.Script by @scottjehl, rebound by @wilto. MIT License.*/
+(function(j){var i=j.document;if(!i.querySelectorAll){return}var l=i.querySelectorAll("meta[name=viewport]")[0],a=l&&l.getAttribute("content"),h=a+", maximum-scale=1.0",d=a+", maximum-scale=10.0",g=true,c=j.orientation,k=0;if(!l){return}function f(){l.setAttribute("content",d);g=true}function b(){l.setAttribute("content",h);g=false}function e(m){c=Math.abs(j.orientation);k=Math.abs(m.gamma);if(k>8&&c===0){if(g){b()}}else{if(!g){f()}}}j.addEventListener("orientationchange",f,false);j.addEventListener("deviceorientation",e,false)})(this);
+</script>
+  
+  
+
+
+  <script>
+           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+           ga('create', 'UA-48379888-1', 'yushiro.github.io');
+           ga('send', 'pageview');
+
+         </script>
+
+
+
+</body>
+</html>
+
